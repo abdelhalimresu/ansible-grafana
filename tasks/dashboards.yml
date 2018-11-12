@@ -37,7 +37,7 @@
   delegate_to: localhost
   run_once: true
   with_items: "{{ grafana_dashboards }}"
-  when: grafana_dashboards | length > 0
+  when: grafana_dashboards_download_enabled
   tags:
     - skip_ansible_lint
 
